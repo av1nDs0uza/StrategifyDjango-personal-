@@ -15,21 +15,21 @@
 </head>
 <body>
 	<header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-            <a href="{% url 'home' %}" class="navbar-brand brand">Strategify</a>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color:aqua">
+            <a href="{% url 'home' %}" class="navbar-brand brand" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="{% url 'home' %}" class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        <a href="{% url 'home' %}" class="nav-link" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="#" class="nav-link" style="font-family:Verdana, Geneva, Tahoma, sans-serif">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'contactus' %}" class="nav-link">Contact Us</a>
+                        <a href="{% url 'contactus' %}" class="nav-link" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -40,7 +40,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-color" id="exampleModalLongTitle">Login</h5>
+                    <h5 class="modal-title text-color" id="exampleModalLongTitle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Login</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -66,8 +66,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="ghost btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" onclick="login()" class="ghost">Login</button>
+                    <button type="button" class="ghost btn btn-outline-danger" data-dismiss="modal" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Close</button>
+                    <button type="button" onclick="login()" class="ghost btn btn-outline-success" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Login</button>
                 </div>
             </div>
         </div>
@@ -80,8 +80,8 @@
             <div class="col-md-6 col-xl-6 p-2 col-sm-12 col-xs-12 form-signup-container">
                 <form id="registerForm" method="POST">
                     {% csrf_token %}
-                    <h1>Create Account</h1>
-                    <span>Use your email for registration</span>
+                    <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Create Account</h1>
+                    <span style="font-family:Verdana, Geneva, Tahoma, sans-serif">Use your email for registration</span>
                     <input type="text" name="username" id="username" placeholder="Username" onKeyUp="checkUsername()" required>
                     <span><strong id="usernameMssg"></strong></span>
                     <input type="text" name="name" id="name" placeholder="Name">
@@ -93,14 +93,15 @@
                     <span><strong id="passwordMssg"></strong></span>
                     <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" onKeyUp="checkPassword()">
                     <span><strong id="cpasswordMssg"></strong></span>
-                    <button type="button" id="nextBtn" onclick="next()">Next   </button>
+                    <button type="button" class="btn btn-outline-success" id="nextBtn"   onclick="next()">Next   </button>
                 </form>
             </div>
-            <div class="col-6 d-sm-none d-md-block d-none d-sm-block align-content-center form-overlay">
-                <div class="overlay-panel">
-                    <h1 class="brand">Strategify</h1>
-                    <h5>Just 10 seconds away to earn!</h5>
-                    <button data-toggle="modal" data-target="#LoginModal"  class="ghost">Login</button>
+            <div class="col-6 d-sm-none d-md-block d-none d-sm-block align-content-center form-overlay" style="background-color:aqua">
+                <div class="overlay-panel" style="background-color:aqua">
+                    <h1 class="brand" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</h1>
+                    <h5 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Just 10 seconds away to earn!</h5>
+                    <button data-toggle="modal" data-target="#LoginModal"  class="btn btn-outline-success" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Login</button>
+
                 </div>
             </div>
         </div>
@@ -111,18 +112,18 @@
             <div class="col-md-6 col-xl-6 p-2 col-sm-12 col-xs-12 otp-form-signup-container">
                 <form id="otpForm" method="POST">
                     {% csrf_token %}
-                    <span id="otpmsgg">OTP is send on</span>
+                    <span id="otpmsgg" style="font-family:Verdana, Geneva, Tahoma, sans-serif">OTP is send on</span>
                     <input type="text" name="username" id="otpsignup" placeholder="OTP">
                     <span><strong id="message"></strong></span>
-                    <button type="button" onclick="signup()">Validate OTP</button>
-                    <a  id="resendotp"  class="ghost">Resend OTP</a>
+                    <button type="button" onclick="signup()" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Validate OTP</button>
+                    <a  id="resendotp"  class="ghost" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Resend OTP</a>
                 </form>
             </div>
             <div class="col-6 d-sm-none d-md-block d-none d-sm-block align-content-center form-overlay">
                 <div class="overlay-panel">
-                    <h1 class="brand">Strategify</h1>
-                    <h5>Just 10 seconds away to earn!</h5>
-                    <button data-toggle="modal" data-target="#LoginModal" id="signInBtn"  class="ghost">Login</button>
+                    <h1 class="brand" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</h1>
+                    <h5 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Just 10 seconds away to earn!</h5>
+                    <button data-toggle="modal" data-target="#LoginModal" id="signInBtn"  class="btn btn-outline-success" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Login</button>
                 </div>
             </div>
         </div>

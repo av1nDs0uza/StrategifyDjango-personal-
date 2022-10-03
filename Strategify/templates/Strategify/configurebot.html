@@ -13,8 +13,8 @@
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     {% csrf_token %}
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand brand" href="{% url 'home' %}">Strategify</a>
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color: aqua;" id="mainNav">
+        <a class="navbar-brand brand" href="{% url 'home' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,35 +23,35 @@
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
                     <a class="nav-link" href="{% url 'dashboard' %}">
                         <i class="fa fa-fw fa-dashboard"></i>
-                        <span class="nav-link-text">Dashboard</span>
+                        <span class="nav-link-text"style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
                     <a class="nav-link" href="{% url 'charts' %}">
                         <i class="fa fa-fw fa-area-chart"></i>
-                        <span class="nav-link-text">Charts</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Charts</span>
                   </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Live Trades">
                     <a class="nav-link" href="{% url 'deploypage' %}">
                         <i class="fa fa-fw fa-table"></i>
-                        <span class="nav-link-text">Deployed Paper Trades</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deployed Paper Trades</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
                     <a class="nav-link" href="{% url 'configure' %}">
                         <i class="fa fa-fw fa-link"></i>
-                        <span class="nav-link-text">Configure Bot</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure Bot</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                         <i class="fa fa-fw fa-user"></i>
-                        <span class="nav-link-text">{{userdata.name}}</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{userdata.name}}</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="collapseExamplePages">
                         <li>
-                            <a href="{% url 'profilepage' %}">Profile</a>
+                            <a href="{% url 'profilepage' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Profile</a>
                         </li>
                     </ul>
                 </li>
@@ -67,50 +67,50 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle ml-lg-4" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-fw fa-bell"></i>
-                        <span class="d-lg-none">Alerts
-                            <span class="badge badge-pill badge-warning">6 New</span>
+                        <span class="d-lg-none" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Alerts
+                            <span class="badge badge-pill badge-warning" style="font-family:Verdana, Geneva, Tahoma, sans-serif">6 New</span>
                         </span>
                         <span class="indicator text-warning d-none d-lg-block">
                             <i class="fa fa-fw fa-circle"></i>
                         </span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-                        <h6 class="dropdown-header">New Alerts:</h6>
+                        <h6 class="dropdown-header" style="font-family:Verdana, Geneva, Tahoma, sans-serif">New Alerts:</h6>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">
                             <span class="text-success">
                                 <strong>
-                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status Update
+                                    <i class="fa fa-long-arrow-up fa-fw" style="font-family:Verdana, Geneva, Tahoma, sans-serif"></i>Status Update
                                 </strong>
                             </span>
-                            <span class="small float-right text-muted">11:21 AM</span>
-                            <div class="dropdown-message small">This is an automated server response message. All systems are online.
+                            <span class="small float-right text-muted" style="font-family:Verdana, Geneva, Tahoma, sans-serif">11:21 AM</span>
+                            <div class="dropdown-message small" style="font-family:Verdana, Geneva, Tahoma, sans-serif">This is an automated server response message. All systems are online.
                             </div>
                         </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">
                         <span class="text-danger">
                             <strong>
-                                <i class="fa fa-long-arrow-down fa-fw"></i>Status Update
+                                <i class="fa fa-long-arrow-down fa-fw" style="font-family:Verdana, Geneva, Tahoma, sans-serif"></i>Status Update
                             </strong>
                         </span>
-                        <span class="small float-right text-muted">11:21 AM</span>
-                        <div class="dropdown-message small">This is an automated server response message. All systems are online.
+                        <span class="small float-right text-muted" style="font-family:Verdana, Geneva, Tahoma, sans-serif">11:21 AM</span>
+                        <div class="dropdown-message small" style="font-family:Verdana, Geneva, Tahoma, sans-serif">This is an automated server response message. All systems are online.
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">
                         <span class="text-success">
                             <strong>
-                                <i class="fa fa-long-arrow-up fa-fw"></i>Status Update
+                                <i class="fa fa-long-arrow-up fa-fw" style="font-family:Verdana, Geneva, Tahoma, sans-serif"></i>Status Update
                             </strong>
                         </span>
-                        <span class="small float-right text-muted">11:21 AM</span>
-                        <div class="dropdown-message small">This is an automated server response message. All systems are online.
+                        <span class="small float-right text-muted" style="font-family:Verdana, Geneva, Tahoma, sans-serif" >11:21 AM</span>
+                        <div class="dropdown-message small" style="font-family:Verdana, Geneva, Tahoma, sans-serif">This is an automated server response message. All systems are online.
                         </div>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item small" href="#">View all alerts</a>
+                    <a class="dropdown-item small" href="#" style="font-family:Verdana, Geneva, Tahoma, sans-serif">View all alerts</a>
                 </div>
             </li>
           </ul>
@@ -120,7 +120,7 @@
     <div class="content-wrapper">
         <div class="container-fluid">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active">Configure</li>
+                <li class="breadcrumb-item active" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure</li>
             </ol>
             {% if data.isconfigured %}
                 {% if not data.access %}
@@ -129,10 +129,10 @@
                         <div id="dailyconfigureaccess" class="p-2">
                             <p class="alert alert-success" id="daily_acess_code_error"></p>
                             <div class="form-group d-flex align-items-center flex-column">
-                                <label for="daily_configure_access_code" class="primary-color font-16 font-weight-bold">Access Code</label><br><br>
+                                <label for="daily_configure_access_code" class="primary-color font-16 font-weight-bold" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Access Code</label><br><br>
                                 <input type="text" name="daily_configure_access_code" id="daily_configure_access_code" placeholder="Access Code" required class="form-control">
                                 <br>
-                                <button type="button" class="text-light btn bg-primary-color w-25 rounded-pill shadow-sm" id="daily_access_code_btn" onclick="return daily_access_code()">
+                                <button type="button" class="text-light btn bg-primary-color w-25 rounded-pill shadow-sm" id="daily_access_code_btn" onclick="return daily_access_code()" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                                  Done
                                 </button>
                             </div>
@@ -144,7 +144,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6 col-lg-6 col-xl-6 col-12 d-flex flex-row align-items-baseline">
-                                <label class="font-weight-bold p-4 h6">URL: </label>
+                                <label class="font-weight-bold p-4 h6" style="font-family:Verdana, Geneva, Tahoma, sans-serif">URL: </label>
                                 <div class="form-control input-group flex-column text-truncate  overflow-x-auto">
                                     <p class="align-self-start">{{data.botdata.url}}</p>
                                     <span class="align-self-end padding-left-inherit"><i class="fa fa-clone"></i></span>
@@ -165,12 +165,12 @@
                                 <table class="table table-fixed">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Time</th>
-                                            <th scope="col">Scrip</th>
-                                            <th scope="col">Price</td>
-                                            <th scope="col">Type</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Date</th>
+                                            <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Time</th>
+                                            <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Scrip</th>
+                                            <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Price</td>
+                                            <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Type</th>
+                                            <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -212,36 +212,36 @@
                 {% else %}
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
-                        <p class="h3 text-center">Configure Your Kotak Account.</p>
+                        <p class="h3 text-center" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure Your Kotak Account.</p>
                         <div class="bg-white rounded-lg shadow-sm p-5">
                             <p class="alert" id="configure-alert"></p>
                             {% csrf_token %}
                             <div id="configuredetails">
                                 <div class="form-group">
-                                    <label for="access_token" class="primary-color">Access Token</label>
+                                    <label for="access_token" class="primary-color" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Access Token</label>
                                     <input type="text" id="access_token" name="access_token" placeholder="Access Token" required class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="user_id" class="primary-color">User Id</label>
+                                    <label for="user_id" class="primary-color" style="font-family:Verdana, Geneva, Tahoma, sans-serif">User Id</label>
                                     <input type="text" id="user_id" name="user_id" placeholder="User Id" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="configure_consumer_key" class="primary-color">Consumer Key</label>
+                                    <label for="configure_consumer_key" class="primary-color" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Consumer Key</label>
                                     <input type="text" id="configure_consumer_key" name="configure_consumer_key" placeholder="Consumer Key" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="configure_password" class="primary-color">Password</label>
+                                    <label for="configure_password" class="primary-color" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Password</label>
                                     <input type="text" id="configure_password" name="configure_password" placeholder="Demat Password" class="form-control" required>
                                 </div>
-                                <button type="button" class="text-light btn bg-primary-color btn-block rounded-pill shadow-sm" onclick="return configuredetails()"> Next
+                                <button type="button" class="text-light btn bg-primary-color btn-block rounded-pill shadow-sm" onclick="return configuredetails()" style="font-family:Verdana, Geneva, Tahoma, sans-serif"> Next
                                 </button>
                             </div>
                             <div id="configureaccess">
                                 <div class="form-group">
-                                    <label for="access_code" class="primary-color">Access Code</label>
+                                    <label for="access_code" class="primary-color" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Access Code</label>
                                     <input type="text" name="access_code" id="access_code" placeholder="Access Code" required class="form-control">
                                 </div>
-                                <button type="button" class="text-light btn bg-primary-color btn-block rounded-pill shadow-sm" onclick="return configureaccess()"> Next
+                                <button type="button" class="text-light btn bg-primary-color btn-block rounded-pill shadow-sm" onclick="return configureaccess()" style="font-family:Verdana, Geneva, Tahoma, sans-serif"> Next
                                 </button>
                             </div>
                             <div id="configureurl">
@@ -253,7 +253,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button" class="subscribe text-light btn bg-primary-color btn-block shadow-sm" onclick="return configureComplete()"> Done
+                                <button type="button" class="subscribe text-light btn bg-primary-color btn-block shadow-sm" onclick="return configureComplete()" style="font-family:Verdana, Geneva, Tahoma, sans-serif"> Done
                                 </button>
                             </div>
                         </div>
@@ -266,7 +266,7 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-            <small>Copyright © Strategify 2022</small>
+            <small >Copyright © Strategify 2022</small>
         </div>
       </div>
     </footer>

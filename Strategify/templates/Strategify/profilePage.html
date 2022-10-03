@@ -14,12 +14,12 @@
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   {% csrf_token %}
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color: aqua;" id="mainNav">
     <a class="navbar-brand brand" href="{% url 'home' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <div class="collapse navbar-collapse"  id="navbarResponsive" >
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="{% url 'dashboard' %}">
@@ -57,8 +57,10 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
+        <div class="user"> <img src="./test.jpg" alt="User" width="32" height="32"></div>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active">{{data.name}}</li>
+            
+            <li class="breadcrumb-item active"> {{data.name}}</li>
         </ol>
         <div class="row">
             <div class="col-lg-12">
@@ -102,7 +104,7 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <button class="ghost" onclick="return updateProfile()" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Update</button>
+                                <button class="ghost btn btn-success" onclick="return updateProfile()" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Update</button>
                             </div>
                         </div>
                     </div>
@@ -140,7 +142,7 @@
                         </div>
                         <div class="row mt-5 mb-2">
                             <div class="col-12">
-                                <button class="ghost" onclick="return updatePassword()" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Update</button>
+                                <button class="ghost ghost btn btn-success" onclick="return updatePassword()" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Update</button>
                             </div>
                         </div>
                     </div>
@@ -174,7 +176,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 mt-5 mb-2">
-                            <button class="ghost" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Update</button>
+                            <button class="ghost  btn btn-success" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Update</button>
                         </div>
                     </div>
                 </div>

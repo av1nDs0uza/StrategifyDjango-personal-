@@ -14,8 +14,8 @@
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   {% csrf_token %}
-  <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand brand" href="{% url 'home' %}">Strategify</a>
+  <nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color: aqua;" id="mainNav">
+    <a class="navbar-brand brand" href="{% url 'home' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,35 +24,35 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="{% url 'dashboard' %}">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="{% url 'charts' %}">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Charts</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Live Trades">
             <a class="nav-link" href="#">
                 <i class="fa fa-fw fa-table"></i>
-                <span class="nav-link-text">Deployed Paper Trades</span>
+                <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deployed Paper Trades</span>
             </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
             <a class="nav-link" href="{% url 'configure' %}">
                 <i class="fa fa-fw fa-link"></i>
-                <span class="nav-link-text">Configure Bot</span>
+                <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure Bot</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
-            <span class="nav-link-text">{{userdata.name}}</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{userdata.name}}</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="{% url 'profilepage' %}">Profile</a>
+              <a href="{% url 'profilepage' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Profile</a>
             </li>
           </ul>
         </li>
@@ -69,14 +69,14 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item active">Deploy Page</li>
+        <li class="breadcrumb-item active" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deploy Page</li>
       </ol>
       <!-- Area Chart Example-->
         <div class="container">
             <div id="deploy-status" class="row deploy-status">
-              <button class="tablinks active col-sm" onclick="opendeploytab(event, 'Waiting')">Waiting</button>
-              <button class="tablinks col-sm" onclick="opendeploytab(event, 'Entered')">Entered</button>
-              <button class="tablinks col-sm" onclick="opendeploytab(event, 'Stopped')">Stopped</button>
+              <button class="tablinks active col-sm" onclick="opendeploytab(event, 'Waiting')" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Waiting</button>
+              <button class="tablinks col-sm" onclick="opendeploytab(event, 'Entered')" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Entered</button>
+              <button class="tablinks col-sm" onclick="opendeploytab(event, 'Stopped')" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Stopped</button>
             </div>
         </div>
         <div class="container-fluid mt-5">
@@ -84,32 +84,32 @@
           <table class="table">
             <thead class="table">
               <tr>
-                <th scope="col">Strategy</th>
-                <th scope="col">Instrument</th>
-                <th scope="col">Date</th>
-                <th scope="col">LTP</th>
-                <th scope="col">P&L</th>
-                <th scope="col">Position</th>
-                <th scope="col">Target</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategy</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Instrument</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Date</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">LTP</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">P&L</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Position</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Target</th>
               </tr>
             </thead>
             <tbody>
               {% for e in deploydata %}
                 {% if e.waitenter == "WAIT" %}
                 <tr>
-                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle">{{e.strategyname}}</td>
-                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle">{{e.ScripName}}</td>
-                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle">{{e.deploydate}}</td>
-                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle">{{e.LTP}}</td>
+                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.strategyname}}</td>
+                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.ScripName}}</td>
+                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.deploydate}}</td>
+                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.LTP}}</td>
                   {% if e.Status == 1 %}
-                    <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle text-success">{{e.PL}}</td>
+                    <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle text-success" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.PL}}</td>
                   {% elif e.Status == -1 %}
-                    <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle text-danger">{{e.PL}}</td>
+                    <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle text-danger" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.PL}}</td>
                   {% elif e.Status == 0 %}
-                    <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle">{{e.PL}}</td>
+                    <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.PL}}</td>
                   {% endif %}
-                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle">{{e.waitenter}}</td>
-                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle">{{e.target}}%</td>
+                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.waitenter}}</td>
+                  <td data-toggle="collapse" data-target="#{{e.strategyname|cut:' '}}{{e.ScripName|cut:' '}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.target}}%</td>
                 </tr>
                 {% if e.graphdata %}
                   <tr>
@@ -123,46 +123,46 @@
                               </div>
                             </div>
                             <div class="col-4 d-flex flex-column p-5">
-                              <span class="font-700 font-size-22">Performance Report</span>
-                              <span class="font-700 font-size-14 mt-4"> {{e.algocycles}} AlgoCycles ({{e.deploydate}})</span>
+                              <span class="font-700 font-size-22" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Performance Report</span>
+                              <span class="font-700 font-size-14 mt-4" style="font-family:Verdana, Geneva, Tahoma, sans-serif"> {{e.algocycles}} AlgoCycles ({{e.deploydate}})</span>
                               <div class="hr-div-report"></div>
                                 <div class="row">
                                   <div class="col-6">
-                                    <span class="font-600 font-size-12">Total Quantites</span>
+                                    <span class="font-600 font-size-12" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Total Quantites</span>
                                   </div>
                                   <div class="col-6">
                                     <div class="float-right">
-                                      <span class="font-600 font-size-11">{{e.quantity}}</span>
+                                      <span class="font-600 font-size-11" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.quantity}}</span>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="col-6">
-                                    <span class="font-600 font-size-12">Cycles Completed</span>
+                                    <span class="font-600 font-size-12" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Cycles Completed</span>
                                   </div>
                                   <div class="col-6">
                                     <div class="float-right">
-                                      <span class="font-600 font-size-11">{{e.cyclescount}}</span>
+                                      <span class="font-600 font-size-11" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.cyclescount}}</span>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="col-6">
-                                    <span class="font-600 font-size-12">P&L</span>
+                                    <span class="font-600 font-size-12" style="font-family:Verdana, Geneva, Tahoma, sans-serif">P&L</span>
                                   </div>
                                   <div class="col-6">
                                     <div class="float-right">
-                                      <span class="font-600 font-size-11">{{e.PL}}</span>
+                                      <span class="font-600 font-size-11" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.PL}}</span>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="col-6">
-                                    <span class="font-600 font-size-12">LTP</span>
+                                    <span class="font-600 font-size-12" style="font-family:Verdana, Geneva, Tahoma, sans-serif">LTP</span>
                                   </div>
                                   <div class="col-6">
                                     <div class="float-right">
-                                      <span class="font-600 font-size-11">{{e.LTP}}</span>
+                                      <span class="font-600 font-size-11" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.LTP}}</span>
                                     </div>
                                   </div>
                                 </div>
@@ -182,12 +182,12 @@
           <table class="table">
             <thead class="table">
               <tr>
-                <th scope="col">Strategy</th>
-                <th scope="col">Instrument</th>
-                <th scope="col">LTP</th>
-                <th scope="col">P&L</th>
-                <th scope="col">Position</th>
-                <th scope="col">Target</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategy</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Instrument</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">LTP</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">P&L</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Position</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Target</th>
               </tr>
             </thead>
             <tbody>
@@ -247,12 +247,12 @@
           <table class="table">
             <thead class="table">
               <tr>
-                <th scope="col">Strategy</th>
-                <th scope="col">Instrument</th>
-                <th scope="col">LTP</th>
-                <th scope="col">P&L</th>
-                <th scope="col">Position</th>
-                <th scope="col">Target</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategy</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Instrument</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">LTP</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">P&L</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Position</th>
+                <th scope="col" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Target</th>
               </tr>
             </thead>
             <tbody>
@@ -314,15 +314,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Ready to Leave?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+          <div class="modal-body" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Cancel</button>
+            <a class="btn btn-primary" href="login.html" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Logout</a>
           </div>
         </div>
       </div>
