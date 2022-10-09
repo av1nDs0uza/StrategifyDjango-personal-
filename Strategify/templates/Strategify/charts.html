@@ -13,8 +13,8 @@
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   {% csrf_token %}
-  <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand brand" href="{% url 'home' %}">Strategify</a>
+  <nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color: aqua;" id="mainNav">
+    <a class="navbar-brand brand" href="{% url 'home' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,25 +23,25 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="{% url 'dashboard' %}">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Charts</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Live Trades">
           <a class="nav-link" href="{% url 'deploypage' %}">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Deployed Paper Trades</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deployed Paper Trades</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link" href="{% url 'configure' %}">
             <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Configure Bot</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure Bot</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
@@ -51,7 +51,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="{% url 'profilepage' %}">Profile</a>
+              <a href="{% url 'profilepage' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Profile</a>
             </li>
           </ul>
         </li>
@@ -68,7 +68,7 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item active">Charts</li>
+        <li class="breadcrumb-item active" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Charts</li>
       </ol>
       <div class="row" id="indexData">
         
@@ -78,12 +78,12 @@
 
         <div class="error-card">
             <div class="card text-center w-50">
-                <div class="card-header">
+                <div class="card-header" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                         Connection Error
                 </div>
                 <div class="card-body">
                     <p class="card-text text-danger">{{status.error}}.</p>
-                    <a href="#" class="btn btn-primary">Need Help!</a>
+                    <a href="#" class="btn btn-primary" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Need Help!</a>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
           <!-- Example Bar Chart Card-->
           <div class="card mb-3">
             <div class="card-header">
-              <i class="fa fa-bar-chart"></i> Line Chart Example</div>
+              <i class="fa fa-bar-chart" style="font-family:Verdana, Geneva, Tahoma, sans-serif"></i> Line Chart Example</div>
               <div class="card-body search-input">
                 <div class="row">
                   <div class="col-lg-4 col-xs-12 col-sm-12">
@@ -112,27 +112,27 @@
                     <div class="selector">
                         <div class="selecotr-item">
                             <input type="radio" value="5d" id="radio2" name="period" class="selector-item_radio" onclick="searchStockName()">
-                            <label for="radio2" class="selector-item_label">5d</label>
+                            <label for="radio2" class="selector-item_label" style="font-family:Verdana, Geneva, Tahoma, sans-serif">5d</label>
                         </div>
                         <div class="selecotr-item">
                             <input type="radio" value="1mo" id="radio3" name="period" class="selector-item_radio"onclick="searchStockName()">
-                            <label for="radio3" class="selector-item_label">1mo</label>
+                            <label for="radio3" class="selector-item_label" style="font-family:Verdana, Geneva, Tahoma, sans-serif">1mo</label>
                         </div>
                         <div class="selecotr-item">
                             <input type="radio" value="6mo" id="radio4" name="period" class="selector-item_radio" checked onclick="searchStockName()">
-                            <label for="radio4" class="selector-item_label">6mo</label>
+                            <label for="radio4" class="selector-item_label" style="font-family:Verdana, Geneva, Tahoma, sans-serif">6mo</label>
                         </div>
                         <div class="selecotr-item">
                             <input type="radio" value="1y" id="radio5" name="period" class="selector-item_radio" onclick="searchStockName()">
-                            <label for="radio5" class="selector-item_label">1y</label>
+                            <label for="radio5" class="selector-item_label" style="font-family:Verdana, Geneva, Tahoma, sans-serif">1y</label>
                         </div>
                         <div class="selecotr-item">
                             <input type="radio" value="5y" id="radio6" name="period" class="selector-item_radio" onclick="searchStockName()">
-                            <label for="radio6" class="selector-item_label">5y</label>
+                            <label for="radio6" class="selector-item_label" style="font-family:Verdana, Geneva, Tahoma, sans-serif">5y</label>
                         </div>
                         <div class="selecotr-item">
                             <input type="radio" value="max" id="radio7" name="period" class="selector-item_radio"onclick="searchStockName()">
-                            <label for="radio7" class="selector-item_label">max</label>
+                            <label for="radio7" class="selector-item_label" style="font-family:Verdana, Geneva, Tahoma, sans-serif">max</label>
                         </div>
                     </div>
                   </div>
@@ -148,30 +148,30 @@
                   </div>
                 </div>
               </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div class="card-footer small text-muted" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Updated yesterday at 11:59 PM</div>
           </div>
         </div>
       </div>
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Today Market</div>
+          <i class="fa fa-table" style="font-family:Verdana, Geneva, Tahoma, sans-serif"</i> Today Market</div>
         <div class="card-body">
           <div class="table-responsive">
             <div>
-                <label>Top Gainers</label>
+                <label style=style="font-family:Verdana, Geneva, Tahoma, sans-serif">Top Gainers</label>
                 <div class="float-right">
                   <a href="" id="topgainersrefresh" onclick='return topgainersrefresh()'><i class="fa fa-refresh "></i></a>
                 </div>
             </div>
-            <table class="table table-bordered" width="100%" cellspacing="0">
-              <thead class="bg-success1">
+            <table class="table table-hover table-success" width="100%" cellspacing="0">
+              <thead class="bg-success" >
                 <tr>
-                  <th>SYMBOL</th>
-                  <th>OPEN</th>
-                  <th>HIGH</th>
-                  <th>CLOSE</th>
-                  <th>PREV. CLOSE</th>
-                  <th>VOLUME</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">SYMBOL</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">OPEN</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">HIGH</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">CLOSE</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">PREV. CLOSE</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">VOLUME</th>
                 </tr>
               </thead>
               <tfoot>
@@ -185,15 +185,15 @@
                 <a href="" id="toplosersrefresh" onclick='return toplosersrefresh()'><i class="fa fa-refresh"></i></a>
               </div>
             </div>
-            <table class="table table-bordered" width="100%" cellspacing="0">
-              <thead class="bg-danger1">
+            <table class="table table-hover table-danger" width="100%" cellspacing="0">
+              <thead class="bg-danger">
                 <tr>
-                  <th>SYMBOL</th>
-                  <th>OPEN</th>
-                  <th>HIGH</th>
-                  <th>CLOSE</th>
-                  <th>PREV. CLOSE</th>
-                  <th>VOLUME</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">SYMBOL</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">OPEN</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">HIGH</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">CLOSE</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">PREV. CLOSE</th>
+                  <th style="font-family:Verdana, Geneva, Tahoma, sans-serif">VOLUME</th>
                 </tr>
               </thead>
               <tfoot>
@@ -361,10 +361,10 @@
                   var change = "";
                   var arrow = "";
                   if(parseFloat(data.success.data[i].percChange)>0.00){
-                    change = "bg-success1";
+                    change = "bg-success";
                     arrow = "fa-arrow-up";
                   }else{
-                    change = "bg-danger1";
+                    change = "bg-danger";
                     arrow = "fa-arrow-down"
                   }
                   const content = `<div class="col-xl-3 col-sm-6 mb-3">
@@ -406,7 +406,7 @@
 
                 var topgainertable = document.querySelector(".topgainerstable");
                 topgainertable.innerHTML = "";
-                for(let i=0;i<5;i++){
+                for(let i=0;i<10;i++){
                   let tablerow = document.createElement('tr');
 
                   let symbol = document.createElement('td');
@@ -466,7 +466,7 @@
 
                 let toplosertable = document.querySelector(".toploserstable");
                 toplosertable.innerText = "";
-                for(let i=0;i<5;i++){
+                for(let i=0;i<10;i++){
                   let tablerow = document.createElement('tr');
 
                   let symbol = document.createElement('td');

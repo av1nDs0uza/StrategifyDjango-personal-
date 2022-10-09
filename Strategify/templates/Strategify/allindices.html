@@ -15,8 +15,8 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   {% csrf_token %}
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand brand" href="{% url 'home' %}">Strategify</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color:aqua" id="mainNav">
+    <a class="navbar-brand brand" href="{% url 'home' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,35 +25,35 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="{% url 'dashboard' %}">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="{% url 'charts' %}">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Charts</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Live Trades">
           <a class="nav-link" href="{% url 'deploypage' %}">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Deployed Paper Trades</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deployed Paper Trades</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link" href="{% url 'configure' %}">
             <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Configure Bot</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure Bot</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
-            <span class="nav-link-text">{{data.name}}</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{data.name}}</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="{% url 'profilepage' %}">Profile</a>
+              <a href="{% url 'profilepage' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Profile</a>
             </li>
           </ul>
         </li>
@@ -89,7 +89,7 @@
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
-        <li class="breadcrumb-item active">All Indices</li>
+        <li class="breadcrumb-item active" style="font-family:Verdana, Geneva, Tahoma, sans-serif">All Indices</li>
       </ol>
       <!-- Area Chart Example-->
       <div class="row">
@@ -103,7 +103,7 @@
       </div>
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i>Live Index Watch</div>
+          <i class="fa fa-table" style="font-family:Verdana, Geneva, Tahoma, sans-serif"></i>Live Index Watch</div>
         <div class="card-body">
           <div class="table-responsive">
             <div>
@@ -112,8 +112,8 @@
                   <a href="" id="topgainersrefresh" onclick='return topgainersrefresh()'><i class="fa fa-refresh "></i></a>
                 </div>
             </div>
-            <table class="table table-bordered" width="100%" cellspacing="0">
-              <thead class="bg-success1">
+            <table class="table table-hover table-info" width="100%" cellspacing="0">
+              <thead class="bg-info">
                 <tr>
                   <th>SYMBOL</th>
                   <th>CURRENT</th>

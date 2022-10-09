@@ -13,8 +13,8 @@
 	<title>BackTestResult</title>
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand brand" href="{% url 'home' %}">Strategify</a>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color:aqua" id="mainNav">
+        <a class="navbar-brand brand"  href="{% url 'home' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,35 +23,35 @@
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
                     <a class="nav-link" href="{% url 'dashboard' %}">
                         <i class="fa fa-fw fa-dashboard"></i>
-                        <span class="nav-link-text">Dashboard</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
                     <a class="nav-link" href="{% url 'charts' %}">
                         <i class="fa fa-fw fa-area-chart"></i>
-                        <span class="nav-link-text">Charts</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Charts</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Live Trades">
                     <a class="nav-link" href="{% url 'deploypage' %}">
                         <i class="fa fa-fw fa-table"></i>
-                        <span class="nav-link-text">Deployed Paper Trades</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deployed Paper Trades</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
                   <a class="nav-link" href="{% url 'configure' %}">
                     <i class="fa fa-fw fa-link"></i>
-                    <span class="nav-link-text">Configure Bot</span>
+                    <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure Bot</span>
                   </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right">
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
                         <i class="fa fa-fw fa-user"></i>
-                        <span class="nav-link-text">{{name}}</span>
+                        <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{name}}</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="collapseExamplePages">
                         <li>
-                        <a href="{% url 'profilepage' %}">Profile</a>
+                        <a href="{% url 'profilepage' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Profile</a>
                         </li>
                     </ul>
                 </li>
@@ -72,7 +72,7 @@
 <div class="content-wrapper">
     <div class="container-fluid">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" id="strategyname">{{strategyName}}</li>
+            <li class="breadcrumb-item active" id="strategyname" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{strategyName}}</li>
         </ol>
         <div class="container-fluid backtestHistory">
             <div class="section-25 section-md-55 section-lg-75 section-xl-75 mt-5">
@@ -83,14 +83,14 @@
                                 {{response.POST.startDate}} to {{response.POST.stopDate}}
                             </div>
                             <div class="col-6 ml-auto align-content-end text-end">
-                                <button class="ghost" data-toggle="modal" data-target="#deploymodal">Deploy</button>
+                                <button class="ghost btn-outline-success" data-toggle="modal" data-target="#deploymodal">Deploy</button>
                             </div>
                         </div>
                     </div>
                     <div class="range mt-5">
                         <div class="row">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                                     <thead>
                                         <tr>
                                             <th scope="col">Instrument</th>
@@ -110,21 +110,21 @@
                                     <tbody id="MAonTCS">
                                         {% if error %}
                                             <tr>
-                                                <td colspan="12"><b>{{error.error}}</b></td>
+                                                <td colspan="12" style="font-family:Verdana, Geneva, Tahoma, sans-serif"><b>{{error.error}}</b></td>
                                             </tr>
                                         {% else %}
                                             {% for e in data %}
                                                 <tr>
-                                                    <td data-label="Account" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">
+                                                    <td data-label="Account" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                                                         {{e.ScripName}}
                                                     </td>
-                                                    <td data-label="Due Date" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">
+                                                    <td data-label="Due Date" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">
                                                         {{e.LTP}}
                                                     </td>
                                                     {% if e.Status == 0 %}
-                                                        <td data-label="Amount" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle"><span class="text-danger">{{e.PL}}</span></td>
+                                                        <td data-label="Amount" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle"><span class="text-danger" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.PL}}</span></td>
                                                     {% else %}
-                                                        <td data-label="Amount" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle"><span class="text-success">+{{e.PL}}</span></td>
+                                                        <td data-label="Amount" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle"><span class="text-success" style="font-family:Verdana, Geneva, Tahoma, sans-serif">+{{e.PL}}</span></td>
                                                     {% endif %}
                                                     <td data-label="Period" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">
                                                         <div class="progress bg-danger">
@@ -139,9 +139,9 @@
                                                     <td data-label="Due Date" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">
                                                         {{e.Wins}}
                                                     </td>
-                                                    <td data-label="Amount" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">{{e.Loss}}</td>
-                                                    <td data-label="Period" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">{{e.WinStreak}}</td>
-                                                    <td data-label="Account" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">{{e.LossStreak}}</td>
+                                                    <td data-label="Amount" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.Loss}}</td>
+                                                    <td data-label="Period" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.WinStreak}}</td>
+                                                    <td data-label="Account" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.LossStreak}}</td>
                                                     <!-- <td data-label="Due Date" data-toggle="collapse" data-target="#{{e.ScripName}}" class="accordion-toggle">--</td> -->
                                                     <td data-label="Amount"><span><a href="static/GeneratedFile/{{e.username}}{{e.ScripName}}.csv"><i class="fa fa-download"></i></a></span></td>
                                                     <td data-label="Period"><input type="checkbox" name="{{e.ScripName}}"></td>
@@ -158,43 +158,43 @@
                                                                     </div>
                                                                     <div class="col-3 backtestHistorySecondC">
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Total Quantites</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Total Quantites</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.Quantity}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Total no of Signal</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Total no of Signal</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.Signal}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">No of Wins</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">No of Wins</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.Wins}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">No of Losses</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">No of Losses</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.Loss}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Winning Streak</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Winning Streak</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.WinStreak}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Lossing Streak</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Lossing Streak</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.LossStreak}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Max Gain</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Max Gain</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.MaxGain}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Max Loss</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Max Loss</span>
                                                                             <span class="backtestHistorySecondCF2">-{{e.MaxLoss}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Average gain</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Average gain</span>
                                                                             <span class="backtestHistorySecondCF2">{{e.AvgGain}}</span>
                                                                         </div>
                                                                         <div class="backtestHistorySecondCF">
-                                                                            <span class="backtestHistorySecondCF1">Average Loss</span>
+                                                                            <span class="backtestHistorySecondCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Average Loss</span>
                                                                             <span class="backtestHistorySecondCF2">-{{e.AvgLoss}}</span>
                                                                         </div>
                                                                         <!-- <div class="backtestHistorySecondCF">
@@ -204,12 +204,12 @@
                                                                     </div>
                                                                     <div class="col-3 backtestHistoryThirdC">
                                                                         <div class="backtestHistoryThirdCF">
-                                                                            <span class="backtestHistoryThirdCF1">Period High</span>
+                                                                            <span class="backtestHistoryThirdCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Period High</span>
                                                                             <span class="backtestHistoryThirdCF2">{{e.PeriodHigh}}</span>
                                                                         </div>
                                                                         <div class="backtestHistoryThirdCF">
-                                                                            <span class="backtestHistoryThirdCF1">Period Low</span>
-                                                                            <span class="backtestHistoryThirdCF2">{{e.PeriodLow}}</span>
+                                                                            <span class="backtestHistoryThirdCF1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Period Low</span>
+                                                                            <span class="backtestHistoryThirdCF2" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.PeriodLow}}</span>
                                                                         </div>
                                                                         <!-- <div class="backtestHistoryThirdCF">
                                                                             <span class="backtestHistoryThirdCF1">Period Return</span>
@@ -238,7 +238,7 @@
                 <div class="modal-content">
                     {% csrf_token %}
                     <div class="modal-header">
-                        <h5 class="modal-title text-color" id="indicator2headingModal">Deploy</h5>
+                        <h5 class="modal-title text-color" id="indicator2headingModal" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deploy</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -247,7 +247,7 @@
                         
                             <div class="form-group row p-1">
                                 <div class="col-6">
-                                    <label class="text-dark form-control">Algo Cycles</label>
+                                    <label class="text-dark form-control" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Algo Cycles</label>
                                 </div>
                                 <div class="col-6">
                                     <input type="number" name="algocycles" id="algocycles" class="form-control">

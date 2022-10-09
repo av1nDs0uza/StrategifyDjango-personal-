@@ -15,8 +15,8 @@
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   {% csrf_token %}
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand brand" href="{% url 'home' %}">Strategify</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color:aqua" id="mainNav">
+    <a class="navbar-brand brand" href="{% url 'home' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Strategify</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,35 +25,35 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Dashboard</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="{% url 'charts' %}">
             <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Charts</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Live Trades">
           <a class="nav-link" href="{% url 'deploypage' %}">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Deployed Paper Trades</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Deployed Paper Trades</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link" href="{% url 'configure' %}">
             <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Configure Bot</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Configure Bot</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-user"></i>
-            <span class="nav-link-text">{{userdata.name}}</span>
+            <span class="nav-link-text" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{userdata.name}}</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="{% url 'profilepage' %}">Profile</a>
+              <a href="{% url 'profilepage' %}" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Profile</a>
             </li>
           </ul>
         </li>
@@ -72,7 +72,7 @@
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search Strategy..." id="searchStrategy" onkeyup="searchStrategyByName()">
               <span class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-success" type="button">
                   <i class="fa fa-search"></i>
                 </button>
               </span>
@@ -88,19 +88,19 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item active">Dashboard</li>
+        <li class="breadcrumb-item active" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Dashboard</li>
       </ol>
       <div class="row" id="indexData">
        
       </div>
       <div class="row">
         <div class="col-12 p-3">
-          <a href="{% url 'allindices' %}" class="float-right allindices-btn">View All</a>
+          <a href="{% url 'allindices' %}" class="float-right allindices-btn" style="font-family:Verdana, Geneva, Tahoma, sans-serif">View All</a>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <div class="mb-0 mt-4 font-size-12 font-600">My Strtategies </div>
+          <div class="mb-0 mt-4 font-size-12 font-600" style="font-family:Verdana, Geneva, Tahoma, sans-serif">My Strategies </div>
           <hr class="mt-2">
         </div>
       </div>
@@ -116,18 +116,18 @@
                   <div class="d-flex justify-content-between">
                     <div class="d-flex flex-row align-items-center">
                       <div class="ms-2 c-details">
-                        <h5><b>Create New Strategy</b></h5>
+                        <h5><b style="font-family:Verdana, Geneva, Tahoma, sans-serif">Create New Strategy</b></h5>
                       </div>
                     </div>
                   </div>
                   <div class="mt-2">
-                    <h6 class="heading">Create and backtest.</h6>
+                    <h6 class="heading" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Create and backtest.</h6>
                   </div>
                   <div class="mt-5">
                   </div>
                 </div>
                 <a href="{% url 'createstrategy' %}" class="card-footer clearfix small z-1" href="#">
-                  <span class="float-left font-12">Create Here</span>
+                  <span class="float-left font-12" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Create Here</span>
                   <span class="float-right">
                     <i class="fa fa-plus"></i>
                   </span>
@@ -141,21 +141,21 @@
                     <div class="d-flex justify-content-between">
                       <div class="d-flex flex-row align-items-center delete-strategy-row">
                         <div class="ms-2 c-details">
-                          <h5 class="heading" id="strategy-heading">{{e.strategyname}}</h5>
+                          <h5 class="heading" id="strategy-heading" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.strategyname}}</h5>
                         </div>
                       </div>
                     </div>
                     <div class="mt-2 d-flex justify-content-between">
                       <div class="d-flex flex-row align-items-center">
-                        <h6 class="heading ms-2">{{e.scripname}}</h6>
+                        <h6 class="heading ms-2" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.scripname}}</h6>
                       </div>
                     </div>
                     <div class="mt-5">
-                      <div class="mt-2"> <span class="text1">Last Modified: {{e.createDate}}</span> </div>
+                      <div class="mt-2"> <span class="text1" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Last Modified: {{e.createDate}}</span> </div>
                     </div>
                   </div>
                   <a class="card-footer clearfix small z-1" href="#">
-                    <span class="float-left">View Details</span>
+                    <span class="float-left" style="font-family:Verdana, Geneva, Tahoma, sans-serif">View Details</span>
                     <span class="float-right">
                       <i class="fa fa-angle-right"></i>
                     </span>
@@ -171,7 +171,7 @@
       </div>
       <div class="row">
         <div class="col-lg-8">
-          <div class="mb-0 mt-4 font-size-12 font-600">Sample Strategies </div>
+          <div class="mb-0 mt-4 font-size-12 font-600" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Sample Strategies </div>
           <hr class="mt-2">
           <div class="row">
                 <div class="col-12 my-auto">
@@ -194,11 +194,11 @@
                                     </div>
                                   </div>
                                   <div class="mt-2">
-                                    <h6 class="heading">{{e.scripname}}</h6>
+                                    <h6 class="heading" style="font-family:Verdana, Geneva, Tahoma, sans-serif">{{e.scripname}}</h6>
                                   </div>
                                 </div>
                                 <a class="card-footer clearfix small z-1" href="#">
-                                  <span class="float-left">View Details</span>
+                                  <span class="float-left" style="font-family:Verdana, Geneva, Tahoma, sans-serif">View Details</span>
                                   <span class="float-right">
                                     <i class="fa fa-angle-right"></i>
                                   </span>
@@ -216,8 +216,8 @@
                 </div>
               </div>
         </div>
-        <div class="col-lg-4">
-          <div class="mb-0 mt-4 font-size-12 font-600">Recent Activities </div>
+        <!-- <div class="col-lg-4">
+          <div class="mb-0 mt-4 font-size-12 font-600" style="font-family:Verdana, Geneva, Tahoma, sans-serif">Recent Activities </div>
           <hr class="mt-2">
           <div class="card mb-3">
             <div class="card-header">
@@ -245,7 +245,7 @@
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <footer class="sticky-footer">
