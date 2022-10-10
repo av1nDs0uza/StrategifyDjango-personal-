@@ -870,4 +870,19 @@ def exitSignalGeneration(period1, period2, operator):
 
 def deploystrategyprevdaysremoval(date):
     data['Position'] = np.where(data.index < date,0.0,data['Position'])
+    
+def news(request):
+	import requests
+	import json
+	
+	# News API
+	api_request = requests.get('http://newsapi.org/v2/everything?q=stocks&apiKey=324889cfc21a46068b615855107cfee6')
+	
+	# BASIC - Stock News API
+	#api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=general&items=50&token=</your_api_key>')
+	
+	# PREMIUM - Stock News API
+	# api_request = requests.get('https://stocknewsapi.com/api/v1/category?section=alltickers&items=50&token=</your_api_key>')
+	api = json.loads(api_request.content)
+	return render(request, 'news.html', {'api': api}) 
 
